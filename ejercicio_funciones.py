@@ -9,6 +9,7 @@
 from turtle import *
 
 from freegames import vector
+import math
 
 def line(start, end):
     "Dibuja línea de principio a fin."
@@ -37,16 +38,16 @@ def circle(start, end):
     up()
     goto(start.x, start.y)
     down()
-    begin.fill()
+    begin_fill()
     
-    circumference = 2 * (abs(start.x-end.x)+abs(start.y-end.y)) *math.pi
+    circumference = 2 * (abs(start.x-end.x)+abs(start.y-end.y)) * math.pi
     step_size= circumference/360
     
     for count in range(360):
          forward(step_size)
          left(1)
          
-    enf_fill()
+    end_fill()
          
     
     
