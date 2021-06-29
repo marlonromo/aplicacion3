@@ -38,8 +38,20 @@ def square(start, end):
 
 
 def circle(start, end):
-    "Draw circle from start to end."
-    pass  # TODO
+ "Se dibuja el circulo."
+    up()
+    goto(start.x, start.y)
+    down()
+    begin.fill()
+    
+    circumference = 2 * (abs(start.x-end.x)+abs(start.y-end.y)) *math.pi
+    step_size= circumference/360
+    
+    for count in range(360):
+         forward(step_size)
+         left(1)
+         
+    enf_fill()
 
 
 def rectangle(start, end):
