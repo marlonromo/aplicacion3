@@ -9,7 +9,9 @@ aim = vector(0, -10)
 
 
 def change(x, y):
-    "Change snake direction."
+    "Cambiar dirección de víbora."
+    aim.x = x
+    aim.y = y
 
 
 def inside(head):
