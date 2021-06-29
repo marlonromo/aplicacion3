@@ -58,9 +58,6 @@ def world():
 
 def move():
     "Move pacman and all ghosts."
-<<<<<<< Updated upstream
-=======
-    "Move pacman and all ghosts."
     writer.undo()
     writer.write(state['score'])
 
@@ -107,8 +104,6 @@ def move():
             return
 
     ontimer(move, 100)
->>>>>>> Stashed changes
-
 
 def change(x, y):
     "Change pacman aim if valid."
