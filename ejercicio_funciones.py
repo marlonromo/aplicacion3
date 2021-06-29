@@ -1,8 +1,9 @@
-"Autor: Equipo 6"
-"Matricula: A00827878"
-"Matricula: A01379117"
-"Matricula: A00827937"
-"Matricula: A000827765"
+"-Equipo 6-"
+"Integrantes:"
+"Ricardo Lopez  A00827878"
+"Francisco Ambriz A01379117"
+"Juan Pablo Ortiz A00827937"
+"Marlon Romo A000827765"
 
 
 from turtle import *
