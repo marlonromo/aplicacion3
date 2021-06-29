@@ -9,19 +9,18 @@ aim = vector(0, -10)
 
 
 def change(x, y):
-    "Change snake direction."
+    "cambio de direccion de las vibora."
     aim.x = x
     aim.y = y
 
 
 def inside(head):
-    "Return True if head inside boundaries."
+    "se regresa verdadero si la cabeza de la vibora se encuentra dentro de los limites."
     return -200 < head.x < 190 and -200 < head.y < 190
 
 
 def move():
-    "Move snake forward one segment."
-    "Move snake forward one segment."
+    "mover la vibora en una direccion"
     head = snake[-1].copy()
     head.move(aim)
 
