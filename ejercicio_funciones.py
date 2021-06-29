@@ -10,6 +10,81 @@ from turtle import *
 
 from freegames import vector
 
+def line(start, end):
+    "Draw line from start to end."
+    up()
+    goto(start.x, start.y)
+    down()
+    goto(end.x, end.y)
+
+
+def square(start, end):
+    "Draw square from start to end."
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
+
+    for count in range(4):
+        forward(end.x - start.x)
+        left(90)
+
+    end_fill()
+
+
+def circle(start, end):
+    "Draw circle from start to end."
+    up()
+    goto(start.x, start.y)
+    down()
+    begin.fill()
+    
+    circumference = 2 * (abs(start.x-end.x)+abs(start.y-end.y)) *math.pi
+    step_size= circumference/360
+    
+    for count in range(360):
+         forward(step_size)
+         left(1)
+         
+    enf_fill()
+         
+    
+    
+
+def rectangle(start, end):
+    "Draw rectangle from start to end."
+
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
+
+    for count in range(4):
+        if count%2 == 0:
+            forward(end.x - start.x)
+            left(90)
+        else:
+           forward((end.y - start.y))
+           left(90)
+
+    end_fill()
+
+
+
+def triangle(start, end):
+    "Draw triangle from start to end."
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
+    
+    for i in range(3):
+         forward(end.x - start.x)
+         left(120)
+         forward(end.x - start.x)
+    
+    end_fill()
+    pass  # TODO
 
 
 
