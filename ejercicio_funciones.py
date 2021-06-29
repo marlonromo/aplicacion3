@@ -11,7 +11,7 @@ from turtle import *
 from freegames import vector
 
 def line(start, end):
-    "Draw line from start to end."
+    "Dibuja línea de principio a fin."
     up()
     goto(start.x, start.y)
     down()
@@ -19,7 +19,7 @@ def line(start, end):
 
 
 def square(start, end):
-    "Draw square from start to end."
+    "Dibuja cuadro de principio a fin."
     up()
     goto(start.x, start.y)
     down()
@@ -33,7 +33,7 @@ def square(start, end):
 
 
 def circle(start, end):
-    "Draw circle from start to end."
+    "Dibuja círculo de principio a fin."
     up()
     goto(start.x, start.y)
     down()
@@ -52,7 +52,7 @@ def circle(start, end):
     
 
 def rectangle(start, end):
-    "Draw rectangle from start to end."
+    "Dibuja rectángulo de principio a fin."
 
     up()
     goto(start.x, start.y)
@@ -72,7 +72,7 @@ def rectangle(start, end):
 
 
 def triangle(start, end):
-    "Draw triangle from start to end."
+    "Dibuja triangulo de principio a fin."
     up()
     goto(start.x, start.y)
     down()
@@ -89,7 +89,7 @@ def triangle(start, end):
 
 
 def tap(x, y):
-    "Store starting point or draw shape."
+    "Proporciona punto de inicio o dibuja figura."
     start = state['start']
 
     if start is None:
@@ -102,7 +102,7 @@ def tap(x, y):
 
 
 def store(key, value):
-    "Store value in state at key."
+    "Guardar valor en estado clave."
     state[key] = value
 
 
