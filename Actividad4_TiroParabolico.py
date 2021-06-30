@@ -11,12 +11,16 @@ targets = []
 def tap(x, y):
     "Responder al toque de la pantalla."
     if not inside(ball):
-
-   if not inside(ball):
         ball.x = -199
         ball.y = -199
         speed.x = (x + 200) / 25
         speed.y = (y + 200) / 25
+
+
+def inside(xy):
+    "Devuelve True si xy dentro de la pantalla."
+    return -200 < xy.x < 200 and -200 < xy.y < 200
+
 
 def draw():
     "Dibujar pelota y objetivos."
@@ -31,9 +35,10 @@ def draw():
         dot(6, 'red')
 
     update()
-    
+
+
 def move():
-  "Mueve la pelota y los objetivos."
+    "Mueve la pelota y los objetivos."
     if randrange(40) == 0:
         y = randrange(-150, 150)
         target = vector(200, y)
