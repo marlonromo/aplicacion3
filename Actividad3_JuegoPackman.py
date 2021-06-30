@@ -41,7 +41,7 @@ tiles = [
 
 
 def square(x, y):
-    "Draw square using path at (x, y)."
+    "Dibujar un cuadrado usando la ruta en (x, y)."
     path.up()
     path.goto(x, y)
     path.down()
@@ -54,7 +54,7 @@ def square(x, y):
     path.end_fill()
 
 def offset(point):
-    "Return offset of point in tiles."
+    "Devuelve el desplazamiento del punto en mosaicos."
     x = (floor(point.x, 20) + 200) / 20
     y = (180 - floor(point.y, 20)) / 20
     index = int(x + y * 20)
@@ -63,7 +63,7 @@ def offset(point):
 
 
 def valid(point):
-    "Return True if point is valid in tiles."
+    "Devuelve True si el punto es válido en mosaicos."
     index = offset(point)
 
     if tiles[index] == 0:
@@ -80,8 +80,13 @@ def valid(point):
 
 
 def world():
+<<<<<<< Updated upstream
     "Draw world using path."
  bgcolor('black')
+=======
+    "Dibuja el mundo usando la ruta."
+    bgcolor('black')
+>>>>>>> Stashed changes
     path.color('blue')
 
     for index in range(len(tiles)):
@@ -99,7 +104,7 @@ def world():
 
 
 def move():
-    "Move pacman and all ghosts."
+    "Mueve pacman y todos los fantasmas."
     writer.undo()
     writer.write(state['score'])
 
@@ -148,7 +153,14 @@ def move():
     ontimer(move, 100)
 
 def change(x, y):
+<<<<<<< Updated upstream
     "Change pacman aim if valid."
+=======
+    "Cambiar el objetivo de pacman si es válido."
+    if valid(pacman + vector(x, y)):
+        aim.x = x
+        aim.y = y
+>>>>>>> Stashed changes
 
 
 setup(420, 420, 370, 0)
