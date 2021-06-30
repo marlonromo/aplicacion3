@@ -64,6 +64,19 @@ def offset(point):
 
 def valid(point):
     "Return True if point is valid in tiles."
+    index = offset(point)
+
+    if tiles[index] == 0:
+        return False
+
+    index = offset(point + 19)
+
+    if tiles[index] == 0:
+        return False
+
+    return point.x % 20 == 0 or point.y % 20 == 0
+
+
 
 
 def world():
