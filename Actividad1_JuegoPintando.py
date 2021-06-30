@@ -52,6 +52,24 @@ def circle(start, end):
          left(1)
          
     enf_fill()
+    
+def circle2(start, end):
+ "Se dibuja el circulo."
+    up()
+    goto(start.x, start.y)
+    down()
+    begin.fill()
+    
+    circumference = 2 * (abs(start.x-end.x)+abs(start.y-end.y)) *math.pi
+    step_size= circumference/360
+    
+    for count in range(360):
+         forward(step_size)
+         left(1)
+         
+    enf_fill()
+    
+
 
 
 def rectangle(start, end):
@@ -115,12 +133,14 @@ listen()
 onkey(undo, 'u')
 onkey(lambda: color('black'), 'K')
 onkey(lambda: color('white'), 'W')
+onkey(lambda: color('yellow'), 'Y')
 onkey(lambda: color('green'), 'G')
 onkey(lambda: color('blue'), 'B')
 onkey(lambda: color('red'), 'R')
 onkey(lambda: store('shape', line), 'l')
 onkey(lambda: store('shape', square), 's')
 onkey(lambda: store('shape', circle), 'c')
+onkey(lambda: store('shape', circle2), 'c2')
 onkey(lambda: store('shape', rectangle), 'r')
 onkey(lambda: store('shape', triangle), 't')
 done()
