@@ -55,6 +55,11 @@ def square(x, y):
 
 def offset(point):
     "Return offset of point in tiles."
+    x = (floor(point.x, 20) + 200) / 20
+    y = (180 - floor(point.y, 20)) / 20
+    index = int(x + y * 20)
+    return index
+
 
 
 def valid(point):
